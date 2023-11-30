@@ -7,7 +7,12 @@
   </head>
   <body>
     <section class="split">
-      <input type="file" id="uploader" multiple>
+      <div>
+        <input type="file" id="uploader" multiple>
+      </div>
+      <div>
+        <p id="result"></p>
+      </div>
     </section>
     <script type="module">
       // This is a basic example more efficient than "basic.html".
@@ -24,7 +29,7 @@
         
         for (let i=0; i<files.length; i++) {
           const res = await worker.recognize(files[i]);
-          console.log(res.data.text);
+          document.getElementById('result').textContent = res.data.text;
         }
       }
       const elm = document.getElementById('uploader');
