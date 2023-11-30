@@ -14,6 +14,7 @@
         <p id="result"></p>
       </div>
     </section>
+    <script src="eruda.js"></script>
     <script type="module">
       // This is a basic example more efficient than "basic.html".
       // In this example we create a worker once, and this worker is re-used
@@ -32,8 +33,8 @@
           document.getElementById('result').textContent = res.data.text;
         }
       }
-      const elm = document.getElementById('uploader');
-      elm.addEventListener('change', recognize);
+      const ele = document.getElementById('uploader');
+      ele.addEventListener('change', recognize);
     </script>
   </body>
 </html>
